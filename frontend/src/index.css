@@ -1,0 +1,129 @@
+/* ============================================================
+   DESIGN TOKENS
+   Concept: a counter-service restaurant runs on two physical
+   objects — the printed menu board and the thermal order ticket.
+   The UI borrows both: warm "paper" surfaces for browsing,
+   and a dark "ticket" surface with monospace numerals for the
+   kitchen/counter side, where speed and scanability matter.
+   ============================================================ */
+:root {
+  /* Color */
+  --paper: #F6F1E7;
+  --paper-dim: #EDE5D3;
+  --ink: #2A2420;
+  --ink-soft: #6B5F52;
+  --charcoal: #1C1916;
+  --charcoal-raised: #262220;
+  --copper: #C9703C;
+  --copper-deep: #A85A2C;
+  --gold: #D4A24E;
+  --sage: #5B8C5A;
+  --rule: rgba(42, 36, 32, 0.14);
+  --rule-dark: rgba(246, 241, 231, 0.12);
+
+  /* Status */
+  --status-pending: #C9703C;
+  --status-cooking: #D4A24E;
+  --status-served: #5B8C5A;
+
+  /* Type */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Work Sans', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+
+  /* Layout */
+  --radius-s: 4px;
+  --radius-m: 10px;
+  --container: 1180px;
+  --shadow-card: 0 1px 2px rgba(42,36,32,0.06), 0 8px 24px rgba(42,36,32,0.07);
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  margin: 0;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+p { margin: 0; }
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+a { color: inherit; text-decoration: none; }
+
+::selection { background: var(--gold); color: var(--charcoal); }
+
+:focus-visible {
+  outline: 2px solid var(--copper);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Reusable badge / pill for category & status chips */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--rule);
+}
+
+.btn {
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 22px;
+  border-radius: var(--radius-s);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.btn:active { transform: scale(0.97); }
+
+.btn-primary {
+  background: var(--copper);
+  color: var(--paper);
+}
+.btn-primary:hover { background: var(--copper-deep); }
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+}
+.btn-ghost:hover { background: var(--ink); color: var(--paper); }
+
+.scrollbar-thin::-webkit-scrollbar { height: 6px; width: 6px; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 4px; }

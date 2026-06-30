@@ -1,0 +1,98 @@
+.ticket {
+  position: relative;
+  background: var(--paper);
+  border-radius: 2px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+  display: flex;
+  overflow: hidden;
+  border-left: 5px solid var(--status-pending);
+}
+.ticket--cooking { border-left-color: var(--status-cooking); }
+.ticket--served { border-left-color: var(--status-served); opacity: 0.65; }
+
+.ticket__perf {
+  width: 14px;
+  background-image: radial-gradient(circle, var(--charcoal) 3px, transparent 3.5px);
+  background-size: 14px 14px;
+  background-position: center;
+}
+
+.ticket__body {
+  flex: 1;
+  padding: 16px 18px 18px;
+  font-family: var(--font-mono);
+  color: var(--ink);
+}
+
+.ticket__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.ticket__id { color: var(--copper-deep); }
+.ticket__table { color: var(--ink-soft); }
+
+.ticket__rule {
+  border-top: 1px dashed var(--rule);
+  margin: 10px 0;
+}
+
+.ticket__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.ticket__items li {
+  font-size: 13.5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: baseline;
+}
+
+.ticket__qty {
+  font-weight: 700;
+  color: var(--copper-deep);
+  min-width: 24px;
+}
+
+.ticket__item-name { font-weight: 500; }
+
+.ticket__note {
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 12px;
+}
+
+.ticket__foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ticket__status {
+  font-family: var(--font-mono);
+  border: none;
+}
+.ticket__status--pending { background: rgba(201,112,60,0.15); color: var(--status-pending); }
+.ticket__status--cooking { background: rgba(212,162,78,0.18); color: #8a6b25; }
+.ticket__status--served { background: rgba(91,140,90,0.16); color: var(--status-served); }
+
+.ticket__time {
+  font-size: 11px;
+  color: var(--ink-soft);
+}
+
+.ticket__advance {
+  width: 100%;
+  margin-top: 14px;
+  font-family: var(--font-body);
+}

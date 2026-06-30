@@ -1,0 +1,82 @@
+.food-card {
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-m);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.15s ease;
+}
+
+.food-card--soldout {
+  opacity: 0.55;
+}
+
+.food-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.food-card__name {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.food-card__price {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--copper-deep);
+  white-space: nowrap;
+}
+
+.food-card__desc {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.food-card__bottom {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.food-card__add {
+  width: 100%;
+  text-align: center;
+}
+
+.food-card__soldout-chip {
+  color: var(--ink-soft);
+}
+
+.food-card__stepper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--paper-dim);
+  border-radius: 999px;
+  padding: 6px 16px;
+}
+
+.food-card__stepper button {
+  width: 24px;
+  height: 24px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.food-card__stepper span {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  min-width: 14px;
+  text-align: center;
+}

@@ -1,0 +1,125 @@
+.dash {
+  min-height: 100vh;
+  background: var(--charcoal);
+  color: var(--paper);
+  padding-bottom: 60px;
+}
+
+.dash__header {
+  border-bottom: 1px solid var(--rule-dark);
+  padding: 28px 0 20px;
+}
+
+.dash__header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.dash__live-chip {
+  border-color: var(--rule-dark);
+  color: var(--ink-soft);
+  margin-bottom: 10px;
+}
+
+.dash__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--ink-soft);
+}
+.dash__dot--on { background: var(--sage); }
+
+.dash__title {
+  font-size: 26px;
+  color: var(--paper);
+}
+
+.dash__header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.dash__staff {
+  font-size: 13px;
+  color: var(--ink-soft);
+  font-family: var(--font-mono);
+}
+
+.dash__logout {
+  border-color: var(--rule-dark);
+  color: var(--paper);
+}
+.dash__logout:hover { background: var(--paper); color: var(--charcoal); }
+
+.dash__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  padding: 22px 24px;
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+.dash__stat {
+  background: var(--charcoal-raised);
+  border-radius: var(--radius-m);
+  padding: 16px 18px;
+  border-left: 4px solid var(--status-pending);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.dash__stat--cooking { border-left-color: var(--status-cooking); }
+.dash__stat--served { border-left-color: var(--status-served); }
+
+.dash__stat-num {
+  font-family: var(--font-mono);
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.dash__stat-label {
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.dash__filters {
+  display: flex;
+  gap: 8px;
+  padding: 4px 24px 20px;
+  flex-wrap: wrap;
+}
+
+.dash__filter-btn {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--rule-dark);
+  color: var(--ink-soft);
+}
+
+.dash__filter-btn--active {
+  background: var(--copper);
+  border-color: var(--copper);
+  color: var(--charcoal);
+}
+
+.dash__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding-top: 8px;
+}
+
+.dash__empty {
+  color: var(--ink-soft);
+  font-family: var(--font-mono);
+  padding: 40px 0;
+}
